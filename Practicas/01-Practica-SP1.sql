@@ -1,4 +1,4 @@
---Crear un sp que solicite un Id de una categoría y devuelva el promedio de los precios de sus productos.
+--Crear un sp que solicite un Id de una categorï¿½a y devuelva el promedio de los precios de sus productos.
 use NORTHWND;
 go
 
@@ -15,3 +15,9 @@ go
 execute sp_solicitar_promedio_prod 2;
 
 execute sp_solicitar_promedio_prod @catego=5;
+
+
+execute sp_solicitar_promedio_prod @catego=4;
+
+
+execute sp_solicitar_promedio_prod @catego=6;
