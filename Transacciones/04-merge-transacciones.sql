@@ -14,6 +14,11 @@ Create database mergeEscuelita;
 use mergeEscuelita;
 go
 
+use NORTHWND;
+
+drop table StudentsC1;
+drop table StudentsC2;
+
 CREATE TABLE StudentsC1(
     StudentID       INT
     ,StudentName    VARCHAR(50)
@@ -299,3 +304,15 @@ go
 
 
 		
+
+
+
+		create or alter procedure spu_limpiar_tabla
+@nombreTabla nvarchar(50)
+as
+BEGIN
+	DECLARE @sql nvarchar(50)
+	SET @sql = 'truncate table ' +@nombreTabla;
+	exec(@sql)
+END 
+GO
